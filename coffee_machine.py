@@ -75,9 +75,9 @@ while is_coffee_machine_on:
     else: 
         ingredients_check = check_resources(menu[user_input]["ingredients"])
         if ingredients_check == True:
-            resource_left(resources, menu[user_input]["ingredients"])
             transcation = process_coins(menu[user_input]["cost"])
             if transcation == True:
+                resource_left(resources, menu[user_input]["ingredients"])
                 print(f"Here is your {user_input}. Enjoy!")
         
     
